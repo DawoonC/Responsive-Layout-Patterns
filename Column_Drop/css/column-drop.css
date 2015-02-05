@@ -1,0 +1,92 @@
+body {
+  max-width: 800px;
+  margin: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: sans-serif;
+}
+.container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+.box {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  cursor: default;
+  line-height: 100px;
+  font-size: 18px;
+}
+.title {
+  font-weight: bold;
+  color: #FFF;
+  font-size: 20px;
+}
+.l-title {
+  display: none;
+}
+.m-brk, .l-brk {
+  display: none;
+}
+.first {
+  background: #F44336;
+}
+.second {
+  background: #FB8C00;
+}
+.third {
+  background: #FDD835;
+}
+.fourth {
+  background: #8BC34A;
+}
+.fifth {
+  background: #2196F3;
+}
+.sixth {
+  background: #303F9F;
+}
+.seventh {
+  background: #8E24AA;
+}
+
+@media (min-width: 460px) {
+  .first, .fourth {
+    width: 25%;
+  }
+  .second, .fifth {
+    width: 75%;
+  }
+  .third {
+    width: 100%;
+  }
+  .sixth, .seventh {
+    width: 50%;
+  }
+  .s-title, .s-brk {
+    display: none;
+  }
+  .l-title, .m-brk {
+    display: initial;
+  }
+}
+
+@media (min-width: 700px) {
+  .second, .sixth {
+    width: 50%
+  }
+  .fourth {
+    width: 100%;
+  }
+  .third, .fifth, .seventh {
+    width: 25%;
+  }
+  .m-brk {
+    display: none;
+  }
+  .l-brk {
+    display: initial;
+  }
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Off Canvas Sample</title>
+    <link rel="stylesheet" type="text/css" href="css/off-canvas.css">
+  </head>
+  <body>
+    <nav id="drawer" class="navbar">
+      <h2 class="title">Off Canvas Area</h2>
+    </nav>
+    <section class="overlay inactive"></section>
+    <main class="main-page">
+      <header class="container">
+        <img id="menu-bt" src="images/ic_menu_black_24dp.png">
+        <h2 class="title">Off Canvas Sample</h2>
+      </header>
+      <h2 class="main-content">Main Page Area</h3>
+      <h3>Breakpoint: 700px</h4>
+    </main>
+
+    <script type="text/javascript">
+      // Menu button
+      var menu = document.getElementById('menu-bt');
+      // Off canvas area
+      var drawer = document.getElementById('drawer');
+      // Overlay section
+      var overlay = document.getElementsByClassName('overlay')[0];
+
+      // add event listener to the menu button
+      // drawer will be opened when clicked
+      menu.addEventListener('click', function(e) {
+        drawer.classList.toggle('open');
+        overlay.classList.toggle('inactive');
+        e.stopPropagation();
+      });
+      // add event listener to the overlay section
+      // drawer will be closed when clicked
+      overlay.addEventListener('click', function(e) {
+        if (drawer.classList.contains('open')) {
+          drawer.classList.toggle('open');
+          overlay.classList.toggle('inactive');
+        }
+        e.stopPropagation();
+      });
+    </script>
+  </body>
+</html>
